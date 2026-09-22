@@ -1,0 +1,146 @@
+:root {
+  --accent: #2f5fe9;
+  --navy: #101b42;
+  --bg: #f6f7f5;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+  margin: 0;
+  padding: 0;
+  min-height: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: 'Inter', system-ui, sans-serif;
+  background: var(--bg);
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+/* Shared hover states, ported 1:1 from the original canvas prototype's <style> blocks */
+.navitem {
+  transition: background 0.15s ease, color 0.15s ease;
+}
+.navitem:hover {
+  background: #1b2a5e;
+  color: #ffffff;
+}
+.navitem:hover svg {
+  stroke: #ffffff;
+}
+.navitem.active {
+  background: var(--accent);
+  color: #ffffff;
+}
+.navitem.active svg {
+  stroke: #ffffff;
+}
+.profilebtn:hover {
+  background: #1b2a5e;
+}
+.tab-btn {
+  transition: color 0.15s ease;
+}
+.icon-btn {
+  transition: background 0.15s ease, border-color 0.15s ease;
+}
+.icon-btn:hover {
+  background: #f3f5ff;
+  border-color: #c9d3ff;
+}
+.search-wrap:focus-within {
+  border-color: var(--accent);
+}
+.search-input:focus {
+  outline: none;
+}
+.cta-btn:hover {
+  background: #2450c9;
+}
+.res-card {
+  transition: box-shadow 0.15s ease, border-color 0.15s ease;
+}
+.res-card:hover {
+  box-shadow: 0 4px 14px rgba(16, 27, 66, 0.08);
+  border-color: #c9d3ff;
+}
+.fab-btn:hover {
+  box-shadow: 0 10px 26px rgba(47, 95, 233, 0.45);
+}
+.link-reset {
+  text-decoration: none;
+  color: inherit;
+}
+button {
+  font-family: inherit;
+}
+
+/* Page-local hover classes flagged during the React conversion, consolidated here
+   so every page's hover polish works without per-page <style> blocks. */
+.back-link {
+  transition: color 0.15s ease;
+}
+.back-link:hover {
+  color: #101b42;
+}
+.course-card,
+.incentive-card,
+.company-card,
+.rel-card {
+  transition: box-shadow 0.15s ease, border-color 0.15s ease;
+}
+.course-card:hover,
+.incentive-card:hover,
+.company-card:hover,
+.rel-card:hover {
+  box-shadow: 0 4px 14px rgba(16, 27, 66, 0.08);
+  border-color: #c9d3ff;
+}
+.share-btn {
+  transition: background 0.15s ease, border-color 0.15s ease;
+}
+.share-btn:hover {
+  background: #f3f5ff;
+  border-color: #c9d3ff;
+}
+.detail-btn {
+  transition: background 0.15s ease;
+}
+.detail-btn:hover {
+  background: #2450c9;
+}
+.chip-btn {
+  transition: background 0.15s ease;
+}
+.chip-btn:hover {
+  background: #f3f5ff;
+}
+.member-row {
+  transition: box-shadow 0.15s ease;
+}
+.member-row:hover {
+  box-shadow: 0 4px 14px rgba(16, 27, 66, 0.08);
+}
+.link-btn {
+  transition: opacity 0.15s ease;
+}
+.link-btn:hover {
+  opacity: 0.75;
+}
